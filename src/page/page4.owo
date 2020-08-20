@@ -1,0 +1,76 @@
+<template lang="pug">
+.page-4
+  img.so.so-0(src="@|55.png|" o-tap="window.open('http://hlj-2020ctf.linkedbyx.com/')")
+  img.so.so-1(src="@|72.png|")
+  .so.so-2
+    img.so.so-3(src="@|65.png|")
+    img.so.so-4(src="@|63.png|")
+    img.so.so-5(src="@|67.png|")
+  img.so.so-6(src="@|64.png|")
+  img.so.arrow(src="@|99.png|" o-animation="floatUpDown")
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      owo.tool.touch({
+        el: this.$el,
+        end: function (e) {
+          if (e.swipe[1] < -100) {
+            owo.go('page5//scaleDown/moveFromBottom/true/scaleDown/moveFromTop')
+          } else if (e.swipe[1] > 100) {
+            owo.go('page3//scaleDown/moveFromTop/true/scaleDown/moveFromBottom')
+          }
+        }
+      })
+    },
+    show: function () {
+      owo.animate('zoomIn', this.query('.so-2'), 800)
+      owo.animate('zoomInUp', this.query('.so-6'), 1600)
+    }
+  }
+</script>
+
+
+<style lang="less">
+.so {
+  position: absolute;
+}
+.so-0 {
+  left: 181px;
+  top: 250px;
+  z-index: 3;
+}
+.so-1 {
+  left: 120px;
+  top: 403px;
+  z-index: 2;
+}
+.so-2 {
+  left: 85px;
+  top: 467px;
+  width: 594px;
+  height: 505px;
+  z-index: 1;;
+}
+.so-3 {
+  left: 62px;
+  top: 37px;
+  z-index: 0;
+}
+.so-4 {
+  left: 151px;
+  top: 104px;
+  z-index: -1;
+}
+.so-5 {
+  left: 0px;
+  top: 0px;
+  z-index: -2;
+}
+.so-6 {
+  left: 158px;
+  top: 1088px;
+  z-index: -3;
+}
+</style>

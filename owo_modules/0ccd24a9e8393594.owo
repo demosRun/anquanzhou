@@ -1,0 +1,45 @@
+<template>
+	<div class="overimg">
+		<img src="{{prop._url}}">
+		<i class="light"></i>
+	</div>
+</template>
+
+<style lang="less">
+.overimg{
+	display: block;
+	overflow: hidden;
+}
+.light{
+	cursor:pointer;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 204px;
+	height: 100%;
+	background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+	background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0));
+
+ 
+}
+.overimg .light{
+	animation: yourAnimation 2.6s infinite 0s linear;
+}
+@keyframes yourAnimation{
+    0%{
+			transform: skewx(-25deg) translateX(-160%);
+		}
+    50%{
+			transform: skewx(-25deg) translateX(-160%);
+		}
+    70%{
+			transform: skewx(-25deg) translateX(180%);
+		}
+    100%{
+			transform: skewx(-25deg) translateX(180%);
+		}
+}
+img {
+	display: block;
+}
+</style>

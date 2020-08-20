@@ -1,0 +1,83 @@
+<template lang="pug">
+.page-1
+  img.so.so-0(src="@|107.png|")
+  img.so.so-1(src="@|100.png|")
+  img.so.so-2(src="@|105.png|")
+  img.so.so-3(src="@|106.png|")
+  img.so.so-4(src="@|101.png|")
+  img.so.so-5(src="@|97.png|")
+  img.so.so-6(src="@|98.png|")
+  img.so.so-7(src="@|99.png|" o-animation="floatUpDown")
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      owo.tool.touch({
+        el: this.$el,
+        end: function (e) {
+          if (e.swipe[1] < -100) {
+            owo.go('page2//scaleDown/moveFromBottom/true/scaleDown/moveFromTop')
+          } else {
+            owo.tool.toast('已经是第一页了!')
+          }
+        }
+      })
+      setTimeout(() => {
+        owo.tool.toast('向上滑动下一页')
+      }, 4000);
+    },
+    show: function () {
+      owo.animate('fadeInLeft', this.query('.so-1'), 800)
+      owo.animate('fadeInRight', this.query('.so-4'), 1600)
+      owo.animate('fadeInLeft', this.query('.so-6'), 2400)
+    }
+  }
+</script>
+
+
+<style lang="less">
+.so {
+  position: absolute;
+}
+.so-0 {
+  left: 214px;
+  top: 423px;
+  z-index: 4;
+}
+.so-1 {
+  left: 87px;
+  top: 545px;
+  z-index: 3;
+}
+.so-2 {
+  left: 214px;
+  top: 760px;
+  z-index: 2;
+}
+.so-3 {
+  left: 214px;
+  top: 994px;
+  z-index: 1;
+}
+.so-4 {
+  left: 233px;
+  top: 860px;
+  z-index: 0;
+}
+.so-5 {
+  left: 69px;
+  top: 228px;
+  z-index: 0;
+}
+.so-6 {
+  left: 79px;
+  top: 1101px;
+  z-index: 0;
+}
+.so-7 {
+  left: 354px;
+  top: 1250px;
+  z-index: 0;
+}
+</style>

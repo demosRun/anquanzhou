@@ -1,0 +1,81 @@
+<template lang="pug">
+.page-3
+  img.so.so-0(src="@|118.png|")
+  plug.so.so-1(_name="module163" _url="@|125.png|" _src="https://template.owo.ink/0ccd24a9e8393594.owo")
+  plug.so.so-2(_name="module163" _url="@|124.png|" _src="https://template.owo.ink/0ccd24a9e8393594.owo")
+  plug.so.so-3(_name="module163" _url="@|126.png|" _src="https://template.owo.ink/0ccd24a9e8393594.owo")
+  plug.so.so-4(_name="module163" _url="@|127.png|" _src="https://template.owo.ink/0ccd24a9e8393594.owo")
+  plug.so.so-5(_name="module163" _url="@|121.png|" _src="https://template.owo.ink/0ccd24a9e8393594.owo")
+  img.so.arrow(src="@|99.png|" o-animation="floatUpDown")
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      owo.tool.touch({
+        el: this.$el,
+        end: function (e) {
+          if (e.swipe[1] < -100) {
+            owo.go('page4//scaleDown/moveFromBottom/true/scaleDown/moveFromTop')
+          } else if (e.swipe[1] > 100) {
+            owo.go('page2//scaleDown/moveFromTop/true/scaleDown/moveFromBottom')
+          }
+        }
+      })
+    },
+    show: function () {
+      owo.animate('rotateIn', this.query('.so-1'), 800)
+      owo.animate('rotateIn', this.query('.so-2'), 1600)
+      owo.animate('rotateIn', this.query('.so-3'), 2400)
+      owo.animate('rotateIn', this.query('.so-4'), 3200)
+      owo.animate('rotateIn', this.query('.so-5'), 4000)
+    }
+  }
+</script>
+
+
+<style lang="less">
+.so {
+  position: absolute;
+}
+.so-0 {
+  left: 181px;
+  top: 250px;
+  z-index: 5;
+}
+.so-1 {
+  left: 98px;
+  top: 415px;
+  z-index: 4;
+}
+.so-2 {
+  left: 402px;
+  top: 415px;
+  z-index: 3;
+  .light {
+    animation-delay: 0.2s;
+  }
+}
+.so-3 {
+  left: 29px;
+  top: 841px;
+  z-index: 2;
+}
+.so-4 {
+  left: 276px;
+  top: 841px;
+  z-index: 1;
+  .light {
+    animation-delay: 0.2s;
+  }
+}
+.so-5 {
+  left: 524px;
+  top: 841px;
+  z-index: 0;
+  .light {
+    animation-delay: 0.4s;
+  }
+}
+
+</style>

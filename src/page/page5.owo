@@ -1,0 +1,68 @@
+<template lang="pug">
+.page-5
+  img.so.so-0(src="@|page5-60.png|")
+  img.so.so-1(src="@|page5-65.png|")
+  img.so.so-2(src="@|page5-61.png|")
+  img.so.so-3(src="@|page5-62.png|")
+  img.so.so-4(src="@|page5-63.png|")
+  img.so.so-5(src="@|page5-64.png|")
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      owo.tool.touch({
+        el: this.$el,
+        end: function (e) {
+          if (e.swipe[1] < -100) {
+            owo.tool.toast('已经是最后了!')
+          } else if (e.swipe[1] > 100) {
+            owo.go('page4//scaleDown/moveFromTop/true/scaleDown/moveFromBottom')
+          }
+        }
+      })
+    },
+    show: function () {
+      owo.animate('lightSpeedIn', this.query('.so-2'), 800)
+      owo.animate('lightSpeedIn', this.query('.so-3'), 1800)
+      owo.animate('lightSpeedIn', this.query('.so-4'), 2800)
+    }
+  }
+</script>
+
+
+<style lang="less">
+.so {
+  position: absolute;
+}
+.so-0 {
+  left: 181px;
+  top: 250px;
+  z-index: 5;
+}
+.so-1 {
+  left: 57px;
+  top: 421px;
+  z-index: 4;
+}
+.so-2 {
+  left: 114px;
+  top: 387px;
+  z-index: 3;
+}
+.so-3 {
+  left: 114px;
+  top: 525px;
+  z-index: 2;
+}
+.so-4 {
+  left: 114px;
+  top: 829px;
+  z-index: 1;
+}
+.so-5 {
+  left: 94px;
+  top: 1162px;
+  z-index: 0;
+}
+</style>
