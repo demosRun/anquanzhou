@@ -1,11 +1,12 @@
 <template lang="pug">
-.page-5
-  img.so.so-0(src="@|page5-103.png|")
-  img.so.so-1(src="@|page5-104.png|")
-  img.so.so-2(src="@|page5-99.png|")
-  img.so.so-3(src="@|page5-102.png|")
-  img.so.so-4(src="@|page5-101.png|")
-  img.so.so-5(src="@|page5-100.png|")
+.page-5-0
+  img.so.so-0(src="@|page5-0-84.png|")
+  img.so.so-1(src="@|page5-0-83.png|")
+  img.so.so-2(src="@|page5-0-82.png|")
+  img.so.so-3(src="@|page5-0-81.png|")
+  img.so.so-4(src="@|page5-0-80.png|")
+  img.so.so-5(src="@|page5-0-79.png|")
+  img.so.arrow(src="@|99.png|" o-animation="floatUpDown")
 </template>
 
 <script>
@@ -15,9 +16,9 @@
         el: this.$el,
         end: function (e) {
           if (e.swipe[1] < -100) {
-            owo.tool.toast('已经是最后了!')
+            owo.go('page5//scaleDown/moveFromBottom/true/scaleDown/moveFromTop')
           } else if (e.swipe[1] > 100) {
-            owo.go('page5-0//scaleDown/moveFromTop/true/scaleDown/moveFromBottom')
+            owo.go('page4//scaleDown/moveFromTop/true/scaleDown/moveFromBottom')
           }
         }
       })
@@ -26,6 +27,7 @@
       owo.animate('lightSpeedIn', this.query('.so-2'), 800)
       owo.animate('lightSpeedIn', this.query('.so-3'), 1800)
       owo.animate('lightSpeedIn', this.query('.so-4'), 2800)
+      owo.animate('lightSpeedIn', this.query('.so-5'), 3200)
     }
   }
 </script>
@@ -46,23 +48,23 @@
   z-index: 4;
 }
 .so-2 {
-  left: 93px;
-  top: 1063px;
+  left: 104px;
+  top: 357px;
   z-index: 3;
 }
 .so-3 {
   left: 104px;
-  top: 357px;
+  top: 489px;
   z-index: 2;
 }
 .so-4 {
   left: 104px;
-  top: 586px;
+  top: 791px;
   z-index: 1;
 }
 .so-5 {
   left: 104px;
-  top: 790px;
+  top: 1054px;
   z-index: 0;
 }
 </style>

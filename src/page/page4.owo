@@ -17,7 +17,7 @@
         el: this.$el,
         end: function (e) {
           if (e.swipe[1] < -100) {
-            owo.go('page5//scaleDown/moveFromBottom/true/scaleDown/moveFromTop')
+            owo.go('page5-0//scaleDown/moveFromBottom/true/scaleDown/moveFromTop')
           } else if (e.swipe[1] > 100) {
             owo.go('page3//scaleDown/moveFromTop/true/scaleDown/moveFromBottom')
           }

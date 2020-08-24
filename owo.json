@@ -106,6 +106,11 @@
 	],
 	"pageList": [
 		{
+			"name": "page0",
+			"src": "./src/page/page0.owo",
+			"type": "page"
+		},
+		{
 			"name": "page1",
 			"src": "./src/page/page1.owo",
 			"type": "page"
@@ -123,6 +128,11 @@
 		{
 			"name": "page4",
 			"src": "./src/page/page4.owo",
+			"type": "page"
+		},
+		{
+			"name": "page5-0",
+			"src": "./src/page/page5-0.owo",
 			"type": "page"
 		},
 		{

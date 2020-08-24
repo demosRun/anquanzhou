@@ -1,0 +1,59 @@
+<template lang="pug">
+.page-0
+  img.so.so-0(src="@|page0-76.png|")
+  img.so.so-1(src="@|page0-70.png|" o-animation="shrink" go="page1//scaleDown/moveFromBottom/true/scaleDown/moveFromTop")
+  img.so.so-2(src="@|page0-75.png|")
+  img.so.so-3(src="@|page0-47.png|")
+
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+      owo.tool.touch({
+        el: this.$el,
+        end: function (e) {
+          if (e.swipe[1] < -100) {
+            owo.go('page1//scaleDown/moveFromBottom/true/scaleDown/moveFromTop')
+          } else if (e.swipe[1] > 100) {
+            owo.tool.toast('已经是第一页了!')
+          }
+        }
+      })
+      setTimeout(() => {
+        owo.tool.toast('向上滑动下一页')
+      }, 4000);
+    },
+    show: function () {
+      owo.animate('bounceIn', this.query('.so-0'), 800)
+    }
+  }
+</script>
+
+
+<style lang="less">
+.so {
+  position: absolute;
+}
+.so-0 {
+  left: 86px;
+  top: 350px;
+  z-index: 3;
+}
+.so-1 {
+  left: 277px;
+  top: 911px;
+  z-index: 2;
+}
+.so-2 {
+  left: 28px;
+  top: 1141px;
+  z-index: 1;
+}
+.so-3 {
+  left: 63px;
+  top: 196px;
+  z-index: 0;
+}
+
+</style>

@@ -55,6 +55,46 @@ li {
   list-style: none;
 }
 
+[o-animation="shrink"] {
+  -webkit-animation: shrink 1s linear alternate infinite;
+  animation: shrink 1s linear alternate infinite;
+}
+@-webkit-keyframes shrink{
+  0%{-webkit-transform:scale(0.9);}
+  100%{-webkit-transform:scale(1);}
+}
+@keyframes shrink{
+  0%{transform:scale(0.9);}
+  100%{transform:scale(1);}
+}
+
+.page-0 .so {
+  position: absolute;
+}
+
+.page-0 .so-0 {
+  left: 86px;
+  top: 350px;
+  z-index: 3;
+}
+
+.page-0 .so-1 {
+  left: 277px;
+  top: 911px;
+  z-index: 2;
+}
+
+.page-0 .so-2 {
+  left: 28px;
+  top: 1141px;
+  z-index: 1;
+}
+
+.page-0 .so-3 {
+  left: 63px;
+  top: 196px;
+  z-index: 0;
+}
 
 [o-animation="floatUpDown"] {
   -webkit-animation: floatUpDown 3s linear infinite;
@@ -313,43 +353,82 @@ li {
   top: 1088px;
   z-index: -3;
 }
+.page-5-0 .so {
+  position: absolute;
+}
+
+.page-5-0 .so-0 {
+  left: 181px;
+  top: 220px;
+  z-index: 5;
+}
+
+.page-5-0 .so-1 {
+  left: 47px;
+  top: 391px;
+  z-index: 4;
+}
+
+.page-5-0 .so-2 {
+  left: 104px;
+  top: 357px;
+  z-index: 3;
+}
+
+.page-5-0 .so-3 {
+  left: 104px;
+  top: 489px;
+  z-index: 2;
+}
+
+.page-5-0 .so-4 {
+  left: 104px;
+  top: 791px;
+  z-index: 1;
+}
+
+.page-5-0 .so-5 {
+  left: 104px;
+  top: 1054px;
+  z-index: 0;
+}
 .page-5 .so {
   position: absolute;
 }
 
 .page-5 .so-0 {
   left: 181px;
-  top: 250px;
+  top: 220px;
   z-index: 5;
 }
 
 .page-5 .so-1 {
-  left: 57px;
-  top: 421px;
+  left: 47px;
+  top: 391px;
   z-index: 4;
 }
 
 .page-5 .so-2 {
-  left: 114px;
-  top: 387px;
+  left: 93px;
+  top: 1063px;
   z-index: 3;
 }
 
 .page-5 .so-3 {
-  left: 114px;
-  top: 525px;
+  left: 104px;
+  top: 357px;
   z-index: 2;
 }
 
 .page-5 .so-4 {
-  left: 114px;
-  top: 829px;
+  left: 104px;
+  top: 586px;
   z-index: 1;
 }
 
 .page-5 .so-5 {
-  left: 94px;
-  top: 1162px;
+  left: 104px;
+  top: 790px;
   z-index: 0;
 }
 /* 页面切换动画 */
@@ -399,6 +478,49 @@ li {
 }
 
 /* 动画效果 */
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  animation-duration: 0.75s;
+  animation-name: bounceIn;
+}
+
 @keyframes fadeInLeft {
   from {
     opacity: 0;

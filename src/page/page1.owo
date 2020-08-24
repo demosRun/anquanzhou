@@ -18,8 +18,8 @@
         end: function (e) {
           if (e.swipe[1] < -100) {
             owo.go('page2//scaleDown/moveFromBottom/true/scaleDown/moveFromTop')
-          } else {
-            owo.tool.toast('已经是第一页了!')
+          } else if (e.swipe[1] > 100) {
+            owo.go('page0//scaleDown/moveFromTop/true/scaleDown/moveFromBottom')
           }
         }
       })
